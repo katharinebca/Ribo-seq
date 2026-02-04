@@ -138,6 +138,13 @@ The pipeline creates an organized output directory structure:
 ├── bam/
 │   ├── <prefix>.dedup.sRNA.bam          # Final filtered alignment
 │   └── <prefix>.dedup.sRNA.bam.bai      # BAM index
+├── bed/
+│   ├── <prefix>_reads.bed               # Read coordinates
+│   └── <prefix>_midpoints.bed           # P-site positions
+├── txt/
+│   ├── *_midpoint_location.txt          # Midpoint genomic location analysis
+│   ├── *_read_location.txt              # Read genomic location analysis
+│   └── <prefix>_read_distribution.txt   # Genomic feature distribution
 ├── counts/
 │   ├── <prefix>_unique_raw.txt          # HTSeq raw counts (all genes)
 │   ├── <prefix>_unique_CDS_raw.txt      # HTSeq raw counts (CDS only)
@@ -149,12 +156,12 @@ The pipeline creates an organized output directory structure:
 ├── fastqc/
 │   ├── <input>_fastqc.html              # QC report (raw data)
 │   └── <prefix>_adaptor_trimmed_fastqc.html  # QC report (trimmed)
+├── unmapped/
+│   ├── <prefix>_sRNA_aligned.fastq.gz   # Reads that mapped to small RNAs
+│   └── <prefix>_not_mapped_genome.fastq.gz  # Reads that didn't map to genome
 ├── logs/
 │   └── <prefix>_pipeline.log            # Complete pipeline log
-├── <prefix>_summary.txt                 # Pipeline summary with read counts
-├── <prefix>_read_distribution.txt       # Genomic feature distribution
-├── <prefix>_reads.bed                   # Read coordinates
-└── <prefix>_midpoints.bed               # P-site positions
+└── <prefix>_summary.txt                 # Pipeline summary with read counts
 ```
 
 ### Key Output Descriptions

@@ -170,7 +170,7 @@ The pipeline creates an organized output directory structure:
 - **bigWig file**: Genome browser track for visualization (CPM-normalized)
 - **Count files**: Raw read counts per gene for downstream analysis
 - **TPM file**: Transcripts per million for cross-sample comparisons
-- **Summary file**: Read counts at each processing step + metadata
+- **Summary file**: Read counts at each processing step, software versions, parameters, and final mapping percentage
 - **Read distribution**: Percentage of reads in CDS, UTRs, intergenic regions, etc.
 
 ## Pipeline Parameters
@@ -202,6 +202,7 @@ Review the `*_summary.txt` file to ensure:
 - Small RNA contamination is low (<10% of reads)
 - Genome mapping rate is acceptable (>70%)
 - Deduplication rate is reasonable (typically 20-50% depending on library)
+- **Final mapping percentage** is within expected range (typically 30-60% for good Ribo-seq libraries)
 
 ## Troubleshooting
 
